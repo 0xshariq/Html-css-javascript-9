@@ -1,52 +1,150 @@
 *{
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
+  box-sizing: border-box;  
+}
+
+body{
+  background-image: url(bg-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
+
+/* navbar */
 .links{
-  list-style-decoration: none;
+  list-style: none;
   font-weight: 900;
+  font-size: 1.2rem;
 }
-.header{
+.navbar{
   width: 100vw;
   height: auto; 
+  background-color: transparent;
 }
-.footer{
-  width: 100vw;
-  height: auto;
+
+.navbar h1{
+  font-weight: bold;
+  font-size: 1.5rem;
 }
+.navbar ul li:hover{
+  font-weight: bold;
+  font-size: 1.75rem;
+  border: 2px solid white;
+  background-color: #1B263B;
+}
+
+.menu-bar {
+  display: none; /* Hide menu by default */
+  transition: all 2s ease-in-out 1ms;
+}
+
+.menu-btn{
+  display: inline-block;
+  position: absolute;
+}
+
+.menu-btn i{
+  font-size: 1.5rem;
+  color: #000;
+  background-color: transparent;
+}
+
+.menu-btn i:hover{
+  color: #fff;
+}
+
+menu-btn li{
+  font-size: 1.6rem;
+}
+
+.menu-bar.active {
+  display: block; /* Show menu when active */
+}
+
+.menu-items {
+  display: none; /* Hide menu items by default */
+}
+
+.menu-items.active {
+  display: inline-block; /* Show menu items when active */
+  border: 2px solid white;
+}
+
+/* main content */
 .main{
   width: 100vw;
   height: auto;
+  font-size: 1rem;
+  transition: all 2s ease-in-out 5ms;
+  background-color: transparent;
 }
+.main:hover{
+  font-size: 1.75rem;
+}
+
+/* main content */
 .accordion{
   font-family: Arial, Helvetica, sans-serif;
   width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .accordion-item {
   margin-bottom: 10px;
+  width: 40%;
+  height: auto;
+  background-color: #0CF574;
+  border-radius: 5px;
+
 }
 
 .accordion-title {
   color: #fff;
-  background-color: #dc2b2b;
+  background-color: #2F97C1;
   cursor: pointer;
   padding: 10px;
   transition: background-color 1s;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 .accordion-title:hover {
-  background-color: #9a1616;
+  background-color: #1CCAD8;
 }
 
 .accordion-content {
-  background: lightgoldenrodyellow;
+  background: #587291;
   display: none;
   padding: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .accordion-item.active .accordion-content{
       display: block;
+}
+
+
+/* footer */
+footer{
+  width: 100vw;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+footer div.p1{
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+footer div.p2{
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
